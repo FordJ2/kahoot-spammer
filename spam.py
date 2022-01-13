@@ -3,7 +3,7 @@ from kahoot import client
 _ = os.system('clear')
 bot = client()
 pin = input('Enter game pin> ')
-botname = 'notalan'
+botname = input('Enter bot name> ')
 async def run(digit):
     bot.join(pin, botname+str(digit))
     _ = os.system('clear')
