@@ -1,15 +1,15 @@
-import asyncio, os, sys
-from kahoot import client
-_ = os.system('clear')
-bot = client()
+import asyncio, kahoot, os, sys
+_ = os.system('clear')          # should be 'cls' on windows
+bot = kahoot.client()
 pin = input('Enter game pin> ')
 botname = input('Enter bot name> ')
+botnum = 50000 # input('Enter number of bots> ')
 async def run(digit):
     bot.join(pin, botname+str(digit))
-    _ = os.system('clear')
+    _ = os.system('clear')      # should be 'cls' on windows
     print(botname+str(digit))
 try:
-    for digit in range(50000):
+    for digit in range(botnum):
         asyncio.run(run(digit))
 except KeyboardInterrupt:
     sys.exit()
