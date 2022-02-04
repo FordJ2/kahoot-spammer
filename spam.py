@@ -1,15 +1,12 @@
 import asyncio, kahoot, os, sys
 
 def clrscr():
-    # Windows
-    if os.name == 'nt':
+    if os.name == 'nt': # windows
         _ = os.system('cls')
-  
-    # Mac/Linux
-    else:
+    else: # mac/inux
         _ = os.system('clear')
-        
 clrscr()
+
 bot = kahoot.client()
 pin = input('Enter game pin> ')
 botname = input('Enter bot name> ')
